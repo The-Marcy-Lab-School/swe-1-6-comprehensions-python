@@ -69,7 +69,11 @@ def test_ask_for_number_keeps_asking(monkeypatch, capsys):
     feed(monkeypatch, ["abc", "", "3.5", "7"])
     assert ask_for_number("Age: ") == 7
 
-    printed = [l for l in capsys.readouterr().out.splitlines() if l.strip()]
+    lines = []
+    for line in capsys.readouterr().out.splitlines():
+        if line.strip():
+            lines.append(line)
+    printed = lines
     assert len(printed) == 3, (
         "Each bad answer should say something before asking again."
     )

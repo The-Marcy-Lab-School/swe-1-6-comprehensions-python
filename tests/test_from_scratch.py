@@ -11,7 +11,11 @@ TEST_SUITE_NAME = "From Scratch Tests"
 
 
 def printed(capsys):
-    return [line for line in capsys.readouterr().out.splitlines() if line.strip()]
+    lines = []
+    for line in capsys.readouterr().out.splitlines():
+        if line.strip():
+            lines.append(line)
+    return lines
 
 
 def test_my_for_each():

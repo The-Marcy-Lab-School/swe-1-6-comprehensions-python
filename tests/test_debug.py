@@ -4,7 +4,11 @@ TEST_SUITE_NAME = "Debug Tests"
 
 
 def printed(capsys):
-    return [line for line in capsys.readouterr().out.splitlines() if line.strip()]
+    lines = []
+    for line in capsys.readouterr().out.splitlines():
+        if line.strip():
+            lines.append(line)
+    return lines
 
 
 def test_log_each_name(capsys):
