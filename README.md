@@ -98,7 +98,9 @@ Errors come in two kinds, and which one you have tells you where to look. A
 **syntax error** means Python could not read the file, so nothing ran at all.
 A **runtime error** means the program started, got some way in, and then hit
 something it could not do. If you saw any output before the error, it is a
-runtime error.
+runtime error. The
+[errors and exceptions tutorial](https://docs.python.org/3/tutorial/errors.html)
+is the reference for everything in this assignment.
 
 The single most important thing in the whole assignment:
 
@@ -195,6 +197,8 @@ max(users, key=lambda user: user["age"])
 ```
 
 What function would you hand it to compare words by how long they are?
+W3Schools has a [short page on `lambda`](https://www.w3schools.com/python/python_lambda.asp)
+if that syntax is new.
 
 ### Question 6: `make_announcer`
 
@@ -275,8 +279,10 @@ surface somewhere else, hours later.
 Put something useful in the message. `ValueError` on its own tells the next
 person nothing about which value was wrong.
 
-The test uses `pytest.raises` to check this. Open `tests/test_modify.py` and
-read it, because that is how you will test errors from now on.
+The test uses
+[`pytest.raises`](https://docs.pytest.org/en/stable/how-to/assert.html#assertions-about-expected-exceptions)
+to check this. Open `tests/test_modify.py` and read it, because that is how
+you will test errors from now on.
 
 ### Question 10: `ask_for_number`
 
