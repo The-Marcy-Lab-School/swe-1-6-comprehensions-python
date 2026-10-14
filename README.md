@@ -188,8 +188,13 @@ describe_longest([])
 ```
 
 Hint: `max()` takes a `key=` argument, which is a function it calls on each
-value to decide what to compare. `key=len` is a very short way to say "compare
-them by length".
+value to decide what to compare:
+
+```py
+max(users, key=lambda user: user["age"])
+```
+
+What function would you hand it to compare words by how long they are?
 
 ### Question 6: `make_announcer`
 
