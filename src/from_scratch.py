@@ -1,23 +1,53 @@
-# Build your own versions of the higher-order functions you have been using.
-def my_for_each(values, callback):
+def double_every_number(nums):
     pass
 
 
-def my_map(values, callback):
+def long_words(words, minimum):
     pass
 
 
-def my_filter(values, callback):
+def in_stock(products):
     pass
 
 
-def my_find(values, callback):
+def total_price(products):
     pass
 
 
-def describe_longest(words):
+def cheapest(products):
     pass
 
 
-def make_announcer(func):
+def first_sold_out(products):
+    pass
+
+
+def count_by_category(products):
+    pass
+
+
+def label_each(words):
+    pass
+
+
+def pair_up(names, scores):
+    pass
+
+
+def all_in_stock(products):
+    pass
+
+
+def flatten(grid):
+    """Return every number in a list of rows as one flat list."""
+    pass
+
+
+def only_numbers(values):
+    """Return a new list of just the int and float values."""
+    pass
+
+
+def initials(full_name):
+    """Return the initials of a full name, as in "Ada Lovelace" -> "A.L."."""
     pass

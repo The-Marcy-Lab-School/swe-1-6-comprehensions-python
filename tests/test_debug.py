@@ -1,43 +1,20 @@
-from debug import load_setting, log_each_name, tallest_user
+from debug import any_expensive, top_three
 
 TEST_SUITE_NAME = "Debug Tests"
 
 
-def printed(capsys):
-    lines = []
-    for line in capsys.readouterr().out.splitlines():
-        if line.strip():
-            lines.append(line)
-    return lines
+def test_top_three():
+    """top_three - returns the three HIGHEST scores"""
+    assert top_three([10, 90, 50, 70, 30]) == [90, 70, 50]
+    assert top_three([5, 1]) == [5, 1]
+    assert top_three([]) == []
 
 
-def test_log_each_name(capsys):
-    """log_each_name - prints each name"""
-    log_each_name(["Ada", "Zo", "Bob"])
-    assert printed(capsys) == ["Ada", "Zo", "Bob"]
+def test_any_expensive():
+    """any_expensive - True if ANY product costs more than 100"""
+    cheap = {"name": "Tea", "price": 4}
+    pricey = {"name": "Pot", "price": 250}
 
-
-def test_tallest_user():
-    """tallest_user - returns the user with the greatest height"""
-    users = [
-        {"name": "Ada", "height": 22},
-        {"name": "Zo", "height": 40},
-        {"name": "Bob", "height": 28},
-    ]
-    assert tallest_user(users) == {"name": "Zo", "height": 40}
-
-
-def test_load_setting_finds_a_key():
-    """load_setting - returns the value when the key is there"""
-    assert load_setting({"theme": "dark"}, "theme") == "dark"
-    assert load_setting({"theme": "dark"}, "missing") is None
-
-
-def test_load_setting_does_not_swallow_everything():
-    """load_setting - only catches a missing key, not every possible error"""
-    import inspect
-
-    source = inspect.getsource(load_setting)
-    assert "except:" not in source.replace("except :", "except:"), (
-        "A bare except: hides every error, including the ones you want to see."
-    )
+    assert any_expensive([cheap, pricey]) is True
+    assert any_expensive([cheap]) is False
+    assert any_expensive([]) is False
