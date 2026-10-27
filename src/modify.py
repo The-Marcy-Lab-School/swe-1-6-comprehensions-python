@@ -1,10 +1,25 @@
-def squares_of(nums):
-    result = []
-    for num in nums:
-        result.append(num * num)
-    return result
+def total_seconds(playlist):
+    total = 0
+    for song in playlist:
+        total += song["seconds"]
+    return total
 
 
-def sorted_names(users):
-    users.sort(key=lambda user: user["name"])
-    return users
+def get_titles(playlist):
+    titles = []
+    for song in playlist:
+        titles.append(song["title"])
+    return titles
+
+
+def get_favorites(playlist):
+    favorites = []
+    for song in playlist:
+        if song["is_favorite"]:
+            favorites.append(song)
+    return favorites
+
+
+def sorted_plays(plays):
+    plays.sort(reverse=True)
+    return plays

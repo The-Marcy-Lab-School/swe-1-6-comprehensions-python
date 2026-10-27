@@ -1,7 +1,7 @@
 """Checks the test-first question.
 
 tests/ is restored from the template before grading, so the student's own test
-lives in student_tests/test_initials.py where it survives. These run that file
+lives in student_tests/test_titles_by.py where it survives. These run that file
 and check the three things the question asks for.
 """
 
@@ -10,12 +10,12 @@ import subprocess
 import sys
 from pathlib import Path
 
-from from_scratch import initials
+from from_scratch import titles_by
 
 TEST_SUITE_NAME = "Test First"
 
 STUDENT = Path(__file__).resolve().parent.parent / "student_tests"
-FILE = STUDENT / "test_initials.py"
+FILE = STUDENT / "test_titles_by.py"
 
 
 def written():
@@ -26,16 +26,17 @@ def functions(text):
     return re.findall(r"^def (test_\w+)\s*\(", text, re.M)
 
 
-def test_initials():
-    """initials - one initial per part of the name, each followed by a dot"""
-    assert initials("Ada Lovelace") == "A.L."
-    assert initials("Grace Brewster Hopper") == "G.B.H."
-    assert initials("Ada") == "A."
-
-
-def test_initials_handles_lowercase():
-    """initials - capitalizes an initial that was typed in lowercase"""
-    assert initials("ada lovelace") == "A.L."
+def test_titles_by():
+    """titles_by - the titles of every song by one artist, in playlist order"""
+    playlist = [
+        {"title": "Night Drive", "artist": "Nova", "seconds": 209, "plays": 120, "is_favorite": True},
+        {"title": "Paper Boats", "artist": "The Tides", "seconds": 184, "plays": 0, "is_favorite": False},
+        {"title": "Slow Burn", "artist": "Nova", "seconds": 251, "plays": 45, "is_favorite": True},
+    ]
+    assert titles_by(playlist, "Nova") == ["Night Drive", "Slow Burn"]
+    assert titles_by(playlist, "The Tides") == ["Paper Boats"]
+    assert titles_by(playlist, "Nobody") == []
+    assert titles_by([], "Nova") == []
 
 
 def test_two_tests_with_docstrings():
@@ -43,7 +44,7 @@ def test_two_tests_with_docstrings():
     text = written()
     names = functions(text)
     assert len(names) >= 2, (
-        f"Expected two test functions in student_tests/test_initials.py, "
+        f"Expected two test functions in student_tests/test_titles_by.py, "
         f"found {len(names)}."
     )
 
@@ -58,7 +59,7 @@ def test_records_the_first_failure():
     comments = "\n".join(re.findall(r"#.*", written()))
     assert "AssertionError" in comments, (
         "Paste the error from your first run into a comment at the top of "
-        "student_tests/test_initials.py. The stub returns None, so the first "
+        "student_tests/test_titles_by.py. The stub returns None, so the first "
         "run fails with an AssertionError."
     )
 

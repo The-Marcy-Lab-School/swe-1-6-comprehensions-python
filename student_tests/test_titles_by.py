@@ -1,4 +1,4 @@
-# Write your tests for `initials` here, BEFORE you write the function.
+# Write your tests for `titles_by` here, BEFORE you write the function.
 #
 # Run them with:  python3 -m pytest student_tests
 #

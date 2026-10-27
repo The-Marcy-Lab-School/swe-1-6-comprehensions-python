@@ -1,53 +1,43 @@
-def double_every_number(nums):
+def song_labels(playlist):
     pass
 
 
-def long_words(words, minimum):
+def long_songs(playlist, min_seconds):
     pass
 
 
-def in_stock(products):
+def unplayed_titles(playlist):
     pass
 
 
-def total_price(products):
+def total_plays(playlist):
     pass
 
 
-def cheapest(products):
+def longest_seconds(playlist):
     pass
 
 
-def first_sold_out(products):
+def count_by_artist(playlist):
     pass
 
 
-def count_by_category(products):
+def most_played(playlist):
     pass
 
 
-def label_each(words):
+def first_by_artist(playlist, artist):
     pass
 
 
-def pair_up(names, scores):
+def first_unplayed_index(playlist):
     pass
 
 
-def all_in_stock(products):
+def top_plays(playlist, n):
     pass
 
 
-def flatten(grid):
-    """Return every number in a list of rows as one flat list."""
-    pass
-
-
-def only_numbers(values):
-    """Return a new list of just the int and float values."""
-    pass
-
-
-def initials(full_name):
-    """Return the initials of a full name, as in "Ada Lovelace" -> "A.L."."""
+def titles_by(playlist, artist):
+    """Return the titles of every song by `artist`, in playlist order."""
     pass
