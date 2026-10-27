@@ -117,7 +117,7 @@ Rewrite the four functions in `src/modify.py`. Every test that checks a function
 
 ### Question 1: `total_seconds`
 
-**Lesson section:** _4. Reduce a List of Values Into One Value_, under _`sum()`, `min()`, `max()`, and `len()`_
+**Stuck? Look here first:** _4. Reduce a List of Values Into One Value_, under _`sum()`, `min()`, `max()`, and `len()`_
 
 `total_seconds` adds up the length of every song with an accumulator loop. Rewrite it with `sum()`.
 
@@ -132,7 +132,7 @@ total_seconds([])
 
 ### Question 2: `get_titles`
 
-**Lesson section:** _2. Transforming with List Comprehensions_
+**Stuck? Look here first:** _2. Transforming with List Comprehensions_
 
 `get_titles` builds a list of titles with a loop and `.append()`. Rewrite it as a comprehension, keeping the results identical.
 
@@ -140,7 +140,7 @@ The tests check that the `for` loop and the `.append()` are gone.
 
 ### Question 3: `get_favorites`
 
-**Lesson section:** _3. Filtering with an `if`_
+**Stuck? Look here first:** _3. Filtering with an `if`_
 
 `get_favorites` builds a list of the favorite songs with a loop, an `if`, and `.append()`. Rewrite it as a comprehension, keeping the results identical.
 
@@ -148,7 +148,7 @@ The tests check that the `for` loop and the `.append()` are gone.
 
 ### Question 4: `sorted_plays`
 
-**Lesson section:** _6. Sorting with `sorted()` and `.sort()`_
+**Stuck? Look here first:** _6. Sorting with `sorted()` and `.sort()`_
 
 `sorted_plays` takes a list of play counts and returns them highest first. It also reorders the caller's list, which the caller never asked for. Change it so the caller's list survives.
 
@@ -167,7 +167,7 @@ Fix the seven functions in `src/debug.py`. Each one runs without a syntax error 
 
 ### Question 5: `favorites_only`
 
-**Lesson section:** _3. Filtering with an `if`_
+**Stuck? Look here first:** _3. Filtering with an `if`_
 
 `favorites_only` should return the favorite song records. It returns a list of `True` and `False` instead.
 
@@ -181,7 +181,7 @@ Read the comprehension from the `for` outward. Which part decides what is collec
 
 ### Question 6: `ranked_plays`
 
-**Lesson section:** _6. Sorting with `sorted()` and `.sort()`_, in the _Predict, then run_ box about `.sort()`
+**Stuck? Look here first:** _6. Sorting with `sorted()` and `.sort()`_, in the _Predict, then run_ box about `.sort()`
 
 `ranked_plays` should return every play count, highest first. It returns `None`.
 
@@ -194,7 +194,7 @@ The play counts are sorted correctly. Work out where they went.
 
 ### Question 7: `find_song`
 
-**Lesson section:** _5. Finding the First Match_
+**Stuck? Look here first:** _5. Finding the First Match_
 
 `find_song` should return the record of the song with a given title. It finds the first song and nothing else.
 
@@ -209,7 +209,7 @@ Trace the loop by hand for `"Static"`. How many songs does it look at before it 
 
 ### Question 8: `plays_per_artist`
 
-**Lesson section:** _4. Reduce a List of Values Into One Value_, under _The Accumulator Pattern_ and _Generating a Frequency Counter_
+**Stuck? Look here first:** _4. Reduce a List of Values Into One Value_, under _The Accumulator Pattern_ and _Generating a Frequency Counter_
 
 `plays_per_artist` should total the plays for every artist. It only ever remembers the last song, and it crashes on an empty playlist.
 
@@ -224,7 +224,7 @@ An accumulator has three parts: the starting value, the combining step, and the 
 
 ### Question 9: `average_plays`
 
-**Lesson section:** _4. Reduce a List of Values Into One Value_, under _`sum()`, `min()`, `max()`, and `len()`_
+**Stuck? Look here first:** _4. Reduce a List of Values Into One Value_, under _`sum()`, `min()`, `max()`, and `len()`_
 
 `average_plays` should return the average number of plays. It works for a full playlist and crashes on an empty one.
 
@@ -239,7 +239,7 @@ An empty playlist is a real case: a user who just signed up has one. Handle it b
 
 ### Question 10: `sort_ratings`
 
-**Lesson section:** _6. Sorting with `sorted()` and `.sort()`_, and _2. Transforming with List Comprehensions_
+**Stuck? Look here first:** _6. Sorting with `sorted()` and `.sort()`_, and _2. Transforming with List Comprehensions_
 
 `sort_ratings` takes ratings that users typed in, so every rating is a string. It should return them as numbers, lowest first. It puts them in a strange order and leaves them as strings.
 
@@ -252,7 +252,7 @@ Strings are sorted one character at a time, the way words are put in alphabetica
 
 ### Question 11: `shout_favorites`
 
-**Lesson section:** _Advanced Topics_, under _A New List Shares Its Dictionaries_
+**Stuck? Look here first:** _Advanced Topics_, under _A New List Shares Its Dictionaries_
 
 `shout_favorites` should return the favorite songs with their titles in capital letters. The returned titles are correct, but the titles in the **original** playlist change too.
 
@@ -271,7 +271,7 @@ Write your solutions in `src/from_scratch.py`.
 
 ### Question 12: `song_labels`
 
-**Lesson section:** _2. Transforming with List Comprehensions_
+**Stuck? Look here first:** _2. Transforming with List Comprehensions_
 
 Write a function `song_labels` that returns a **new** list with one label for each song.
 
@@ -286,7 +286,7 @@ Write this one as a comprehension. The tests check that there is no `for` loop.
 
 ### Question 13: `long_songs`
 
-**Lesson section:** _3. Filtering with an `if`_
+**Stuck? Look here first:** _3. Filtering with an `if`_
 
 Write a function `long_songs` that takes a playlist and a `min_seconds`, and returns the song records that are at least that long.
 
@@ -301,7 +301,7 @@ Write this one as a comprehension too. The test reaches into each record for its
 
 ### Question 14: `unplayed_titles`
 
-**Lesson section:** _3. Filtering with an `if`_, where one comprehension transforms and filters
+**Stuck? Look here first:** _3. Filtering with an `if`_, where one comprehension transforms and filters
 
 Write a function `unplayed_titles` that returns the **titles** of the songs that have never been played.
 
@@ -314,7 +314,7 @@ This question does two jobs at once. One comprehension can do both: the `if` dec
 
 ### Question 15: `total_plays`
 
-**Lesson section:** _4. Reduce a List of Values Into One Value_, under _`sum()`, `min()`, `max()`, and `len()`_
+**Stuck? Look here first:** _4. Reduce a List of Values Into One Value_, under _`sum()`, `min()`, `max()`, and `len()`_
 
 Write a function `total_plays` that adds up the plays of every song.
 
@@ -329,7 +329,7 @@ The tests check that there is no `for` loop. Python has a built-in function for 
 
 ### Question 16: `longest_seconds`
 
-**Lesson section:** _4. Reduce a List of Values Into One Value_, under _`sum()`, `min()`, `max()`, and `len()`_
+**Stuck? Look here first:** _4. Reduce a List of Values Into One Value_, under _`sum()`, `min()`, `max()`, and `len()`_
 
 Write a function `longest_seconds` that returns the length, in seconds, of the longest song.
 
@@ -342,7 +342,7 @@ Same shape as `total_plays`, with a different built-in function. The tests check
 
 ### Question 17: `count_by_artist`
 
-**Lesson section:** _4. Reduce a List of Values Into One Value_, under _Generating a Frequency Counter_
+**Stuck? Look here first:** _4. Reduce a List of Values Into One Value_, under _Generating a Frequency Counter_
 
 Write a function `count_by_artist` that counts how many songs each artist has on the playlist.
 
@@ -357,7 +357,7 @@ This is a frequency counter: an accumulator whose starting value is an empty dic
 
 ### Question 18: `most_played`
 
-**Lesson section:** _4. Reduce a List of Values Into One Value_, under _The Accumulator Pattern_
+**Stuck? Look here first:** _4. Reduce a List of Values Into One Value_, under _The Accumulator Pattern_
 
 Write a function `most_played` that returns the **whole record** of the song with the most plays, or `None` when the playlist is empty.
 
@@ -374,7 +374,7 @@ When two songs tie, return the one that comes first in the playlist.
 
 ### Question 19: `first_by_artist`
 
-**Lesson section:** _5. Finding the First Match_
+**Stuck? Look here first:** _5. Finding the First Match_
 
 Write a function `first_by_artist` that returns the **first** song record by a given artist, or `None` when the artist has no songs on the playlist.
 
@@ -389,7 +389,7 @@ This one is **not** a comprehension. A comprehension checks every song before it
 
 ### Question 20: `first_unplayed_index`
 
-**Lesson section:** _5. Finding the First Match_
+**Stuck? Look here first:** _5. Finding the First Match_
 
 Write a function `first_unplayed_index` that returns the **index** of the first song with no plays, or `-1` when every song has been played.
 
@@ -404,7 +404,7 @@ Same job as `first_by_artist`, but the answer is a position instead of a record.
 
 ### Question 21: `top_plays`
 
-**Lesson section:** _Combining Steps_
+**Stuck? Look here first:** _Combining Steps_
 
 Write a function `top_plays` that takes a playlist and a number `n`, and returns the `n` highest play counts, highest first.
 
@@ -419,7 +419,7 @@ This question does three jobs in a row. Name each one, write each one on its own
 
 ### Question 22: test first, then write it
 
-**Lesson section:** _3. Filtering with an `if`_, and the Test-Driven Development lesson for writing the test first
+**Stuck? Look here first:** _3. Filtering with an `if`_, and the Test-Driven Development lesson for writing the test first
 
 `src/from_scratch.py` has a stub for `titles_by`, which returns nothing. Here is the whole requirement, in words:
 
