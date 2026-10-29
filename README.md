@@ -222,6 +222,8 @@ plays_per_artist([])
 
 An accumulator has three parts: the starting value, the combining step, and the return. One of them is in the wrong place, and moving it fixes both problems.
 
+_Hint: `UnboundLocalError` means the function tried to use a variable before any line in the function had given it a value._
+
 ### Question 9: `average_plays`
 
 **Stuck? Look here first:** _4. Reduce a List of Values Into One Value_, under _`sum()`, `min()`, `max()`, and `len()`_
