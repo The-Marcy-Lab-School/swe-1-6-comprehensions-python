@@ -435,7 +435,7 @@ Work in this order, and do not skip to the end:
 - Add a second test, for an artist with no songs on the playlist, and make that pass too.
 
 ```sh
-python3 -m pytest student_tests
+pytest student_tests
 ```
 
 That order is the point of the question. A test written after the fact tends to agree with whatever you already wrote, including the parts that are wrong. A test written first is a statement of what the function owes you, and the failure proves the test can actually tell.
